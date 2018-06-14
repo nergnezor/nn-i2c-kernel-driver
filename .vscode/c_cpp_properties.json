@@ -1,0 +1,49 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "${workspaceFolder}"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        },
+        {
+            "name": "WSL",
+            "intelliSenseMode": "clang-x64",
+            "includePath": [
+                "${localappdata}/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/erik/workdir/Source_Package/APQ8009W_LAW.BR.2.0-01710-8x09w.0_1.2/out/target/product/msm8909w/obj/KERNEL_OBJ/usr/include",
+                "${localappdata}/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/erik/workdir/Source_Package/APQ8009W_LAW.BR.2.0-01710-8x09w.0_1.2/out/target/product/msm8909w/obj/KERNEL_OBJ/arch/arm/include",
+                "${localappdata}/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/erik/workdir/Source_Package/APQ8009W_LAW.BR.2.0-01710-8x09w.0_1.2/out/target/product/msm8909w/obj/KERNEL_OBJ/arch/arm/include/generated",
+                "${localappdata}/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/erik/workdir/Source_Package/APQ8009W_LAW.BR.2.0-01710-8x09w.0_1.2/kernel/include",
+                "${localappdata}/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/erik/workdir/Source_Package/APQ8009W_LAW.BR.2.0-01710-8x09w.0_1.2/kernel/arch/arm/include"
+            ],
+            "defines": [
+                "__linux__",
+                "__arm__"
+            ],
+            "browse": {
+                "path": [
+                    "${localappdata}/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/erik/workdir/Source_Package/APQ8009W_LAW.BR.2.0-01710-8x09w.0_1.2/kernel/include",
+                    "${localappdata}/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/erik/workdir/Source_Package/APQ8009W_LAW.BR.2.0-01710-8x09w.0_1.2/kernel/arch/arm/include",
+                    "${localappdata}/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/erik/workdir/Source_Package/APQ8009W_LAW.BR.2.0-01710-8x09w.0_1.2/kernel/arch/x86/include",
+                    "${localappdata}/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/erik/workdir/Source_Package/APQ8009W_LAW.BR.2.0-01710-8x09w.0_1.2/out/target/product/msm8909w/obj/KERNEL_OBJ/arch/arm/include"
+                ]
+            }
+        }
+    ],
+    "version": 4
+}
