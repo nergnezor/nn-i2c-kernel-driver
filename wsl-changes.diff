@@ -1,0 +1,38 @@
+
+project build/
+diff --git a/core/config.mk b/core/config.mk
+index 94c880f7a..aedea9770 100644
+--- a/core/config.mk
++++ b/core/config.mk
+@@ -505,7 +505,8 @@ LEX := prebuilts/misc/$(BUILD_OS)-$(HOST_PREBUILT_ARCH)/flex/flex-2.5.39
+ # To run bison from elsewhere you need to set up enviromental variable
+ # BISON_PKGDATADIR.
+ BISON_PKGDATADIR := $(PWD)/external/bison/data
+-BISON := prebuilts/misc/$(BUILD_OS)-$(HOST_PREBUILT_ARCH)/bison/bison
++BISON := out/host/linux-x86/bin/bison
++#prebuilts/misc/$(BUILD_OS)-$(HOST_PREBUILT_ARCH)/bison/bison
+ YACC := $(BISON) -d
+ 
+ YASM := prebuilts/misc/$(BUILD_OS)-$(HOST_PREBUILT_ARCH)/yasm/yasm
+@@ -576,7 +577,8 @@ endif
+ 
+ # ijar converts a .jar file to a smaller .jar file which only has its
+ # interfaces.
+-IJAR := $(HOST_OUT_EXECUTABLES)/ijar$(BUILD_EXECUTABLE_SUFFIX)
++IJAR := out/host/linux-x86/bin/ijar
++# $(HOST_OUT_EXECUTABLES)/ijar$(BUILD_EXECUTABLE_SUFFIX)
+ DEXDUMP := $(HOST_OUT_EXECUTABLES)/dexdump2$(BUILD_EXECUTABLE_SUFFIX)
+ 
+ # relocation packer
+diff --git a/core/dex_preopt_libart.mk b/core/dex_preopt_libart.mk
+index acd4a02dd..59ebfab3e 100644
+--- a/core/dex_preopt_libart.mk
++++ b/core/dex_preopt_libart.mk
+@@ -112,6 +112,7 @@ define dex2oat-one-file
+ $(hide) rm -f $(2)
+ $(hide) mkdir -p $(dir $(2))
+ $(hide) ANDROID_LOG_TAGS="*:e" $(DEX2OAT) \
++	"-j1" \
+ 	--runtime-arg -Xms$(DEX2OAT_XMS) --runtime-arg -Xmx$(DEX2OAT_XMX) \
+ 	--runtime-arg -classpath --runtime-arg $(DEX2OAT_CLASSPATH) \
+ 	--boot-image=$(PRIVATE_DEX_PREOPT_IMAGE_LOCATION) \
