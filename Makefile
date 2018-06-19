@@ -1,5 +1,5 @@
 ifneq ($(KERNELRELEASE),)
-obj-m := hello_version.o
+obj-m := zforceair_ts.o
 else
 #CROSS_COMPILE= $(HOME)/dragonboard/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 CROSS_COMPILE= $(HOME)/dragonboard/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin/arm-eabi-
