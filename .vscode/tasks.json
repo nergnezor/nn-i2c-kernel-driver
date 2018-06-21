@@ -15,6 +15,41 @@
                 "reveal": "silent"
             },
             "problemMatcher": "$gcc"
+        },
+        {
+            "label": "dmesg",
+            "type": "shell",
+            "command": "adb.exe shell dmesg | tail -8",
+            "dependsOn": "rmmod",
+        },
+        {
+            "label": "rmmod",
+            "type": "shell",
+            "command": "adb.exe shell rmmod ${fileBasenameNoExtension}",
+            "dependsOn": "insmod"
+        },
+        {
+            "label": "insmod",
+            "type": "shell",
+            "command": "adb.exe shell insmod /data/${fileBasenameNoExtension}.ko",
+            "dependsOn": "push"
+        },
+        {
+            "label": "push",
+            "type": "shell",
+            "command": "adb.exe push ${fileBasenameNoExtension}.ko /data/",
+            "dependsOn": "root"
+        },
+        {
+            "label": "root",
+            "type": "shell",
+            "command": "adb.exe root",
+            "dependsOn": "build"
+        },
+        {
+            "label": "build kernel",
+            "type": "shell",
+            "command": "cd ~/dragonboard && source build/envsetup.sh && lunch msm8909w-userdebug && make -j8 bootimage"
         }
     ]
 }
