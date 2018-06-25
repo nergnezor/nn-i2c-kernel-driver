@@ -3,7 +3,7 @@
         compatible ="neonode,zforceair";//Manufacture, model
         reg = <0x50>; //Slave Address
         interrupt-parent = <&msm_gpio>; //GPIO handler
-        interrupts = <36 0x2>; //GPIO# to gpio_irq #
+        interrupts = <36 0x1>; //GPIO# to gpio_irq #
         neonode_zforceair,irq-gpio = <&msm_gpio 36 0x00>; //Pass a GPIO
     };
 };

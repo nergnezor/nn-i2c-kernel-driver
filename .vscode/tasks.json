@@ -20,13 +20,7 @@
             "label": "dmesg",
             "type": "shell",
             "command": "adb.exe shell dmesg | tail -8",
-            "dependsOn": "rmmod",
-        },
-        {
-            "label": "rmmod",
-            "type": "shell",
-            "command": "adb.exe shell rmmod ${fileBasenameNoExtension}",
-            "dependsOn": "insmod"
+            "dependsOn": "insmod",
         },
         {
             "label": "insmod",
@@ -38,6 +32,12 @@
             "label": "push",
             "type": "shell",
             "command": "adb.exe push ${fileBasenameNoExtension}.ko /data/",
+            "dependsOn": "rmmod"
+        },
+        {
+            "label": "rmmod",
+            "type": "shell",
+            "command": "adb.exe shell rmmod ${fileBasenameNoExtension}",
             "dependsOn": "root"
         },
         {
